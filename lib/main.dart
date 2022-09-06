@@ -4,12 +4,18 @@ void main() {
   runApp(const Homepage());
 }
 
+//First Route starts here
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: 'Homepage',
+      routes: {
+        'Homepage': (BuildContext context) => const Homepage(),
+        'AttractionsKB': (BuildContext context) => const AttractionsKB(),
+      },
       home: Scaffold(
         backgroundColor: const Color.fromRGBO(180, 199, 196, 0.8),
         appBar: AppBar(
@@ -96,20 +102,24 @@ class Homepage extends StatelessWidget {
                         fontSize: 30,
                         color: Colors.lightBlue)),
               ),
-              const SizedBox(height: 0),
               Stack(
                 children: <Widget>[
                   Image.network(
                       'https://www.roche.ch/dam/jcr:bd4ac037-4d20-4497-9a8f-5fec4bc8d320/BS_Areal%20-%20Cityview%20-%20740x416.jpg',
                       fit: BoxFit.cover),
-                  Container(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                    child: const Text("Kleinbasel",
-                        style: TextStyle(
-                            fontFamily: "Nunito",
-                            fontSize: 25,
-                            color: Colors.purple)),
+                  GestureDetector(
+                    // onTap: () {
+                    // Navigator.pushNamed(context, 'AttractionsKB');
+                    // },
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 5, horizontal: 10),
+                      child: const Text("Kleinbasel",
+                          style: TextStyle(
+                              fontFamily: "Nunito",
+                              fontSize: 25,
+                              color: Colors.purple)),
+                    ),
                   ),
                 ],
               ),
@@ -181,9 +191,9 @@ class Homepage extends StatelessWidget {
   }
 }
 
+//Second Route starts here
 class AttractionsKB extends StatelessWidget {
   const AttractionsKB({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
