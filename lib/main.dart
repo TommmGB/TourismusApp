@@ -159,7 +159,9 @@ class Homepage extends StatelessWidget {
               ),
               Stack(
                 children: <Widget>[
-                  Image.asset('map.jpg', fit: BoxFit.cover),
+                  Image.network(
+                      'https://www.bvb.ch/de/wp-content/uploads/sites/2/2022/05/Flexity.png',
+                      fit: BoxFit.cover),
                   Container(
                     padding:
                         const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
@@ -179,13 +181,17 @@ class Homepage extends StatelessWidget {
   }
 }
 
-class Attractionskleinbasel extends StatelessWidget {
-  const Attractionskleinbasel({super.key});
+class AttractionsKB extends StatelessWidget {
+  const AttractionsKB({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Welcome to Kleinbasel!'),
+        ),
+      ),
     );
   }
 }
