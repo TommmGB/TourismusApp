@@ -4,18 +4,17 @@ void main() {
   runApp(const Homepage());
 }
 
-//First Route starts here
+//First Route:Homepage
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: 'Homepage',
-      routes: {
-        'Homepage': (BuildContext context) => const Homepage(),
-        'AttractionsKB': (BuildContext context) => const AttractionsKB(),
-      },
+      // initialRoute: 'Homepage',
+      // routes: {
+      // 'Homepage': (BuildContext context) => const Homepage(),
+      //  'AttractionsKB': (BuildContext context) => const AttractionsKB(),},
       home: Scaffold(
         backgroundColor: const Color.fromRGBO(180, 199, 196, 0.8),
         appBar: AppBar(
@@ -54,8 +53,9 @@ class Homepage extends StatelessWidget {
                 endIndent: 0,
                 color: Colors.grey,
               ),
-              const Card(
-                  child: ListTile(
+              GestureDetector(
+                  child: Card(
+                      child: ListTile(
                 tileColor: Color.fromRGBO(180, 190, 200, 0.8),
                 leading: Icon(Icons.location_on_outlined),
                 title: Text(
@@ -63,9 +63,10 @@ class Homepage extends StatelessWidget {
                   style: TextStyle(
                       fontFamily: "Nunito", fontSize: 25, color: Colors.blue),
                 ),
-              )),
-              const Card(
-                  child: ListTile(
+              ))),
+              GestureDetector(
+                  child: Card(
+                      child: ListTile(
                 leading: Icon(Icons.location_on_outlined),
                 tileColor: Color.fromRGBO(180, 190, 200, 0.8),
                 title: Text(
@@ -73,9 +74,10 @@ class Homepage extends StatelessWidget {
                   style: TextStyle(
                       fontFamily: "Nunito", fontSize: 25, color: Colors.blue),
                 ),
-              )),
-              const Card(
-                  child: ListTile(
+              ))),
+              GestureDetector(
+                  child: Card(
+                      child: ListTile(
                 leading: Icon(Icons.tram_outlined),
                 tileColor: Color.fromRGBO(180, 190, 200, 0.8),
                 title: Text(
@@ -83,7 +85,7 @@ class Homepage extends StatelessWidget {
                   style: TextStyle(
                       fontFamily: "Nunito", fontSize: 25, color: Colors.blue),
                 ),
-              )),
+              ))),
             ],
           ),
         ),
@@ -191,7 +193,7 @@ class Homepage extends StatelessWidget {
   }
 }
 
-//Second Route starts here
+//Second Route: AttractionsKleinBasel
 class AttractionsKB extends StatelessWidget {
   const AttractionsKB({super.key});
   @override
