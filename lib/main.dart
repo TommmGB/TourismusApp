@@ -114,30 +114,30 @@ class Homepage extends StatelessWidget {
             ),
             Stack(
               children: <Widget>[
-                Image.network(
-                    'https://www.roche.ch/dam/jcr:bd4ac037-4d20-4497-9a8f-5fec4bc8d320/BS_Areal%20-%20Cityview%20-%20740x416.jpg',
-                    fit: BoxFit.cover),
                 GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/a');
-                  },
-                  child: Container(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                    child: const Text("Kleinbasel",
-                        style: TextStyle(
-                            fontFamily: "Nunito",
-                            fontSize: 25,
-                            color: Colors.purple)),
-                  ),
+                    onTap: () {
+                      Navigator.pushNamed(context, '/a');
+                    },
+                    child: Image.network(
+                        'https://www.roche.ch/dam/jcr:bd4ac037-4d20-4497-9a8f-5fec4bc8d320/BS_Areal%20-%20Cityview%20-%20740x416.jpg',
+                        fit: BoxFit.cover)),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                  child: const Text("Kleinbasel",
+                      style: TextStyle(
+                          fontFamily: "Nunito",
+                          fontSize: 25,
+                          color: Colors.purple)),
                 ),
               ],
             ),
             Stack(
               children: <Widget>[
-                Image.network(
-                    'https://flatfox.ch/media/medialibrary/2019/05/Munster_858x483px.jpg',
-                    fit: BoxFit.cover),
+                GestureDetector(
+                    child: Image.network(
+                        'https://flatfox.ch/media/medialibrary/2019/05/Munster_858x483px.jpg',
+                        fit: BoxFit.cover)),
                 Container(
                   padding:
                       const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
@@ -163,9 +163,10 @@ class Homepage extends StatelessWidget {
             ),
             Stack(
               children: <Widget>[
-                Image.network(
-                    'https://www.bvb.ch/de/wp-content/uploads/sites/2/2022/05/Flexity.png',
-                    fit: BoxFit.cover),
+                GestureDetector(
+                    child: Image.network(
+                        'https://www.bvb.ch/de/wp-content/uploads/sites/2/2022/05/Flexity.png',
+                        fit: BoxFit.cover)),
                 Container(
                   padding:
                       const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
@@ -179,9 +180,10 @@ class Homepage extends StatelessWidget {
             ),
             Stack(
               children: <Widget>[
-                Image.network(
-                    'https://www.bvb.ch/de/wp-content/uploads/sites/2/2022/05/Flexity.png',
-                    fit: BoxFit.cover),
+                GestureDetector(
+                    child: Image.network(
+                        'https://www.bvb.ch/de/wp-content/uploads/sites/2/2022/05/Flexity.png',
+                        fit: BoxFit.cover)),
                 Container(
                   padding:
                       const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
