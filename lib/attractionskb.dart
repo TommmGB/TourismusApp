@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'homepage.dart';
 
 //Second Route: AttractionsKleinBasel
 class AttractionsKB extends StatelessWidget {
