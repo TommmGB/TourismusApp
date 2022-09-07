@@ -7,10 +7,10 @@ class Homepage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(180, 199, 196, 0.8),
       appBar: AppBar(
-          backgroundColor: Colors.grey,
+          backgroundColor: Colors.blueAccent,
           title: const Text('Explore Basel Today!',
               style: TextStyle(
-                  fontFamily: 'Nunito', fontSize: 30, color: Colors.blue))),
+                  fontFamily: 'Nunito', fontSize: 30, color: Colors.white))),
       drawer: Drawer(
         child: ListView(
           children: <Widget>[
@@ -19,7 +19,7 @@ class Homepage extends StatelessWidget {
               child: const Text('Tour de Bâle:',
                   style: TextStyle(
                     fontFamily: "Nunito",
-                    fontSize: 30,
+                    fontSize: 27,
                     color: Colors.blue,
                   )),
             ),
