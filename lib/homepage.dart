@@ -93,7 +93,7 @@ class Homepage extends StatelessWidget {
                   style: TextStyle(
                       fontFamily: "Nunito",
                       fontSize: 30,
-                      color: Colors.lightBlue)),
+                      color: Colors.purple)),
             ),
             Stack(
               children: <Widget>[
@@ -142,7 +142,7 @@ class Homepage extends StatelessWidget {
                   style: TextStyle(
                       fontFamily: "Nunito",
                       fontSize: 30,
-                      color: Colors.lightBlue)),
+                      color: Colors.purple)),
             ),
             Stack(
               children: <Widget>[
@@ -164,9 +164,12 @@ class Homepage extends StatelessWidget {
             Stack(
               children: <Widget>[
                 GestureDetector(
-                    child: Image.network(
-                        'https://www.bvb.ch/de/wp-content/uploads/sites/2/2022/05/Flexity.png',
-                        fit: BoxFit.cover)),
+                    child: Container(
+                        height: 160,
+                        width: 400,
+                        child: Image.network(
+                            'https://map.viamichelin.com/map/carte?map=viamichelin&z=10&lat=47.55961&lon=7.58061&width=550&height=382&format=png&version=latest&layer=background&debug_pattern=.*',
+                            fit: BoxFit.cover))),
                 Container(
                   padding:
                       const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
