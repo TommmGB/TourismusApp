@@ -118,17 +118,45 @@ class AttractionsGB extends StatelessWidget {
             ),
             SliverGrid(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                mainAxisSpacing: 10,
+                crossAxisCount: 1,
+                mainAxisSpacing: 0,
                 crossAxisSpacing: 10,
                 childAspectRatio: 2.0,
               ),
               delegate: SliverChildListDelegate([
-                Card(
-                  child: Text('hi')),
-                Card(
-                  child: Text('hi'),
-                )
+                Stack(children: <Widget>[
+                  GestureDetector(
+                      child: SizedBox(
+                          height: 300,
+                          width: 400,
+                          child: Card(
+                              borderOnForeground: true,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.only(
+                                      bottomRight: Radius.circular(5),
+                                      topRight: Radius.circular(5)),
+                                  side: BorderSide(
+                                      width: 5, color: Colors.black)),
+                              child: Image.network(
+                                  'https://www.baselferien.ch/bcwa/wp-content/gf-uploads/2018/02/basler-muenster-basel-09.jpg',
+                                  fit: BoxFit.cover)))),
+                  Container(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 5, horizontal: 5),
+                      child: const Card(
+                          borderOnForeground: true,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                  bottomRight: Radius.circular(5),
+                                  topRight: Radius.circular(5)),
+                              side: BorderSide(width: 1, color: Colors.black)),
+                          color: Colors.lightBlueAccent,
+                          child: Text("Basler Münster",
+                              style: TextStyle(
+                                  fontFamily: "Nunito",
+                                  fontSize: 25,
+                                  color: Colors.purple))))
+                ]),
               ]),
             ),
           ],
