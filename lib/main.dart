@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tourismusapp/BaslerMuenster.dart';
+import 'baslermuenster.dart';
 import 'attractionskb.dart';
 import 'attractionsgb.dart';
 import 'homepage.dart';
