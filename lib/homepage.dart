@@ -103,7 +103,7 @@ class Homepage extends StatelessWidget {
           pinned: true,
           floating: false,
           expandedHeight: 200,
-          backgroundColor: Colors.orangeAccent[200],
+          backgroundColor: Colors.orangeAccent[100],
           flexibleSpace: FlexibleSpaceBar(
             title: const Text("Welcome to Basel",
                 style: TextStyle(
