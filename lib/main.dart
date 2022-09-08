@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:tourismusapp/BaslerMuenster.dart';
 import 'attractionskb.dart';
 import 'attractionsgb.dart';
 import 'homepage.dart';
@@ -16,9 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         initialRoute: 'Homepage',
         routes: <String, WidgetBuilder>{
+          'Homepage': (BuildContext context) => const Homepage(),
           '/a': (BuildContext context) => const AttractionsKB(),
           '/b': (BuildContext context) => const AttractionsGB(),
-          'Homepage': (BuildContext context) => const Homepage(),
+          '/c': (BuildContext context) => const BaslerMuenster(),
         },
         home: const Homepage());
   }
