@@ -7,7 +7,7 @@ class Homepage extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
       drawer: Drawer(
-        backgroundColor: Color.fromRGBO(210, 200, 170, 1.0),
+        backgroundColor: Colors.orangeAccent[100],
         child: ListView(
           children: <Widget>[
             Container(
@@ -15,21 +15,19 @@ class Homepage extends StatelessWidget {
               child: const Text('Tour de Bâle',
                   style: TextStyle(
                     fontFamily: "Nunito",
+                    fontWeight: FontWeight.bold,
                     fontSize: 30,
                     color: Colors.blue,
                   )),
             ),
             Container(
-              margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
-              child: const Text('Your guide through Basel!',
+              margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 54),
+              child: const Text('Your guide through Basel',
                   style: TextStyle(
                     fontFamily: "Nunito",
-                    fontSize: 20,
+                    fontSize: 25,
                     color: Colors.blue,
                   )),
-            ),
-            const SizedBox(
-              height: 10,
             ),
             const Divider(
               thickness: 2,
@@ -37,61 +35,72 @@ class Homepage extends StatelessWidget {
               endIndent: 0,
               color: Colors.grey,
             ),
+            SizedBox(height: 10),
             GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/a');
                 },
-                child: const Card(
+                child: Card(
+                    elevation: 10,
                     child: ListTile(
-                  tileColor: Colors.lightBlue,
-                  leading: Icon(Icons.location_on_outlined),
-                  title: Text(
-                    'Kleinbasel',
-                    style: TextStyle(
-                        fontFamily: "Nunito",
-                        fontSize: 25,
-                        color: Colors.purple),
-                  ),
-                ))),
+                      tileColor: Colors.lightBlueAccent[100],
+                      leading: Icon(Icons.location_on_outlined),
+                      title: Text(
+                        'Kleinbasel',
+                        style: TextStyle(
+                            fontFamily: "Nunito",
+                            fontSize: 25,
+                            color: Colors.purple),
+                      ),
+                    ))),
+            SizedBox(height: 10),
             GestureDetector(
-                child: const Card(
+                child: Card(
+                    elevation: 10,
                     child: ListTile(
-              leading: Icon(Icons.location_on_outlined),
-              tileColor: Colors.lightBlue,
-              title: Text(
-                'Grossbasel',
-                style: TextStyle(
-                    fontFamily: "Nunito", fontSize: 25, color: Colors.purple),
-              ),
-            ))),
+                      leading: Icon(Icons.location_on_outlined),
+                      tileColor: Colors.lightBlueAccent[100],
+                      title: Text(
+                        'Grossbasel',
+                        style: TextStyle(
+                            fontFamily: "Nunito",
+                            fontSize: 25,
+                            color: Colors.purple),
+                      ),
+                    ))),
+            SizedBox(height: 10),
             GestureDetector(
-                child: const Card(
+                child: Card(
+                    elevation: 10,
                     child: ListTile(
-              leading: Icon(Icons.tram_outlined),
-              tileColor: Colors.lightBlue,
-              title: Text(
-                'Public Transport',
-                style: TextStyle(
-                    fontFamily: "Nunito", fontSize: 25, color: Colors.purple),
-              ),
-            ))),
+                      leading: Icon(Icons.tram_outlined),
+                      tileColor: Colors.lightBlueAccent[100],
+                      title: Text(
+                        'Public Transport',
+                        style: TextStyle(
+                            fontFamily: "Nunito",
+                            fontSize: 25,
+                            color: Colors.purple),
+                      ),
+                    ))),
           ],
         ),
       ),
       body: CustomScrollView(slivers: <Widget>[
         SliverAppBar(
+          iconTheme: IconThemeData(color: Colors.orangeAccent[150]),
+          forceElevated: true,
           snap: false,
           pinned: true,
           floating: false,
           expandedHeight: 150,
-          backgroundColor: Colors.orangeAccent[400],
+          backgroundColor: Colors.orangeAccent[150],
           flexibleSpace: FlexibleSpaceBar(
-            titlePadding: EdgeInsetsDirectional.all(40),
             title: const Text("Welcome to Basel",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Color.fromRGBO(0, 0, 0, 1.0),
-                  fontSize: 25,
+                  fontSize: 20,
                 )),
             background: Image.network(
               "https://www.traveloffpath.com/wp-content/uploads/2021/07/Basel-night-time.jpg",
@@ -101,12 +110,12 @@ class Homepage extends StatelessWidget {
         ),
         SliverList(
             delegate: SliverChildListDelegate([
-          const ListTile(
+          ListTile(
             leading: Icon(
               Icons.location_on_outlined,
               size: 35,
             ),
-            tileColor: Color.fromRGBO(210, 200, 170, 1.0),
+            tileColor: Colors.orangeAccent[100],
             title: Text('Locations',
                 style: TextStyle(
                     fontFamily: "Nunito",
@@ -150,12 +159,12 @@ class Homepage extends StatelessWidget {
                             fontSize: 25,
                             color: Colors.purple)))),
           ]),
-          const ListTile(
+          ListTile(
             leading: Icon(
               Icons.navigation,
               size: 35,
             ),
-            tileColor: Color.fromRGBO(210, 200, 170, 1.0),
+            tileColor: Colors.orangeAccent[100],
             title: Text('Navigation',
                 style: TextStyle(
                     fontFamily: "Nunito",
