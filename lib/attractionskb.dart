@@ -14,7 +14,7 @@ class AttractionsKB extends StatelessWidget {
               Container(
                 margin:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 70),
-                child: const Text('Grossbasel',
+                child: const Text('Kleinbasel',
                     style: TextStyle(
                       fontFamily: "Nunito",
                       fontWeight: FontWeight.bold,
@@ -108,7 +108,7 @@ class AttractionsKB extends StatelessWidget {
               expandedHeight: 150,
               backgroundColor: Colors.orangeAccent[200],
               flexibleSpace: FlexibleSpaceBar(
-                title: const Text("Discover Grossbasel!",
+                title: const Text("Discover Kleinbasel!",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Color.fromRGBO(0, 0, 0, 1.0),
