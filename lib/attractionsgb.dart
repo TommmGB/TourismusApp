@@ -13,21 +13,12 @@ class AttractionsGB extends StatelessWidget {
             children: <Widget>[
               Container(
                 margin:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 50),
-                child: const Text('Tour de Bâle',
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 70),
+                child: const Text('Grossbasel',
                     style: TextStyle(
                       fontFamily: "Nunito",
                       fontWeight: FontWeight.bold,
                       fontSize: 30,
-                      color: Colors.blue,
-                    )),
-              ),
-              Container(
-                margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 54),
-                child: const Text('Your guide through Basel',
-                    style: TextStyle(
-                      fontFamily: "Nunito",
-                      fontSize: 25,
                       color: Colors.blue,
                     )),
               ),
@@ -82,6 +73,21 @@ class AttractionsGB extends StatelessWidget {
                         tileColor: Colors.lightBlueAccent[100],
                         title: Text(
                           'Public Transport',
+                          style: TextStyle(
+                              fontFamily: "Nunito",
+                              fontSize: 25,
+                              color: Colors.purple),
+                        ),
+                      ))),
+              SizedBox(height: 10),
+              GestureDetector(
+                  child: Card(
+                      elevation: 10,
+                      child: ListTile(
+                        leading: Icon(Icons.map_outlined),
+                        tileColor: Colors.lightBlueAccent[100],
+                        title: Text(
+                          'Interactive Map',
                           style: TextStyle(
                               fontFamily: "Nunito",
                               fontSize: 25,
