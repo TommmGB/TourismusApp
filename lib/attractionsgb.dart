@@ -106,7 +106,7 @@ class AttractionsGB extends StatelessWidget {
               pinned: true,
               floating: false,
               expandedHeight: 150,
-              backgroundColor: Colors.orangeAccent[200],
+              backgroundColor: Colors.lightBlueAccent[100],
               flexibleSpace: FlexibleSpaceBar(
                 title: const Text("Discover Grossbasel!",
                     style: TextStyle(
