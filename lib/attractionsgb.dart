@@ -126,6 +126,9 @@ class AttractionsGB extends StatelessWidget {
               delegate: SliverChildListDelegate([
                 Stack(children: <Widget>[
                   GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/c');
+                      },
                       child: SizedBox(
                           height: 300,
                           width: 400,
