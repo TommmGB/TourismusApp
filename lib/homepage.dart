@@ -88,13 +88,13 @@ class Homepage extends StatelessWidget {
       ),
       body: CustomScrollView(slivers: <Widget>[
         SliverAppBar(
-          iconTheme: IconThemeData(color: Colors.orangeAccent[150]),
-          forceElevated: true,
+          iconTheme: IconThemeData(color: Colors.black),
+          forceElevated: false,
           snap: false,
           pinned: true,
           floating: false,
-          expandedHeight: 150,
-          backgroundColor: Colors.orangeAccent[150],
+          expandedHeight: 200,
+          backgroundColor: Colors.orangeAccent[200],
           flexibleSpace: FlexibleSpaceBar(
             title: const Text("Welcome to Basel",
                 style: TextStyle(
@@ -129,9 +129,12 @@ class Homepage extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, '/a');
                   },
-                  child: Image.network(
-                      'https://www.roche.ch/dam/jcr:bd4ac037-4d20-4497-9a8f-5fec4bc8d320/BS_Areal%20-%20Cityview%20-%20740x416.jpg',
-                      fit: BoxFit.cover)),
+                  child: SizedBox(
+                      height: 230,
+                      width: 400,
+                      child: Image.network(
+                          'https://cdn.tomas-travel.com/tds/repository/TDS00020012496817936/TDS00020010010367324/TDS00020013696921880_sized_800_0.jpg',
+                          fit: BoxFit.cover))),
               Container(
                 padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 0),
                 child: const Card(
@@ -175,9 +178,12 @@ class Homepage extends StatelessWidget {
           Stack(
             children: <Widget>[
               GestureDetector(
-                  child: Image.network(
-                      'https://www.bvb.ch/de/wp-content/uploads/sites/2/2022/05/Flexity.png',
-                      fit: BoxFit.cover)),
+                  child: SizedBox(
+                      height: 230,
+                      width: 400,
+                      child: Image.network(
+                          'https://www.bvb.ch/de/wp-content/uploads/sites/2/2022/05/Flexity.png',
+                          fit: BoxFit.cover))),
               Container(
                 padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 0),
                 child: const Card(
@@ -194,7 +200,7 @@ class Homepage extends StatelessWidget {
             children: <Widget>[
               GestureDetector(
                   child: SizedBox(
-                      height: 160,
+                      height: 230,
                       width: 400,
                       child: Image.network(
                           'https://map.viamichelin.com/map/carte?map=viamichelin&z=10&lat=47.55961&lon=7.58061&width=550&height=382&format=png&version=latest&layer=background&debug_pattern=.*',
