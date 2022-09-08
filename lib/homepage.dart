@@ -119,19 +119,28 @@ class Homepage extends StatelessWidget {
         ),
         SliverList(
             delegate: SliverChildListDelegate([
-          ListTile(
-            leading: Icon(
-              Icons.location_on_outlined,
-              size: 35,
-            ),
-            tileColor: Colors.orangeAccent[100],
-            title: Text('Locations',
-                style: TextStyle(
-                    fontFamily: "Nunito",
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30,
-                    color: Colors.purple)),
-          ),
+          SizedBox(
+              height: 70,
+              child: Card(
+                  borderOnForeground: true,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(5),
+                          topRight: Radius.circular(5)),
+                      side: BorderSide(width: 2, color: Colors.black)),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.location_on_outlined,
+                      size: 35,
+                    ),
+                    tileColor: Colors.orangeAccent[100],
+                    title: Text('Locations',
+                        style: TextStyle(
+                            fontFamily: "Nunito",
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.purple)),
+                  ))),
           Stack(
             children: <Widget>[
               GestureDetector(
@@ -141,12 +150,25 @@ class Homepage extends StatelessWidget {
                   child: SizedBox(
                       height: 230,
                       width: 400,
-                      child: Image.network(
-                          'https://cdn.tomas-travel.com/tds/repository/TDS00020012496817936/TDS00020010010367324/TDS00020013696921880_sized_800_0.jpg',
-                          fit: BoxFit.cover))),
+                      child: Card(
+                          borderOnForeground: true,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                  bottomRight: Radius.circular(5),
+                                  topRight: Radius.circular(5)),
+                              side: BorderSide(width: 5, color: Colors.black)),
+                          child: Image.network(
+                              'https://cdn.tomas-travel.com/tds/repository/TDS00020012496817936/TDS00020010010367324/TDS00020013696921880_sized_800_0.jpg',
+                              fit: BoxFit.cover)))),
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
                 child: const Card(
+                    borderOnForeground: true,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(5),
+                            topRight: Radius.circular(5)),
+                        side: BorderSide(width: 1, color: Colors.black)),
                     color: Colors.lightBlueAccent,
                     child: Text("Kleinbasel",
                         style: TextStyle(
@@ -161,12 +183,25 @@ class Homepage extends StatelessWidget {
                 onTap: () {
                   Navigator.pushNamed(context, '/b');
                 },
-                child: Image.network(
-                    'https://flatfox.ch/media/medialibrary/2019/05/Munster_858x483px.jpg',
-                    fit: BoxFit.cover)),
+                child: Card(
+                    borderOnForeground: true,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(5),
+                            topRight: Radius.circular(5)),
+                        side: BorderSide(width: 5, color: Colors.black)),
+                    child: Image.network(
+                        'https://flatfox.ch/media/medialibrary/2019/05/Munster_858x483px.jpg',
+                        fit: BoxFit.cover))),
             Container(
-                padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
                 child: const Card(
+                    borderOnForeground: true,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(5),
+                            topRight: Radius.circular(5)),
+                        side: BorderSide(width: 1, color: Colors.black)),
                     color: Colors.lightBlueAccent,
                     child: Text("Grossbasel",
                         style: TextStyle(
@@ -174,31 +209,53 @@ class Homepage extends StatelessWidget {
                             fontSize: 25,
                             color: Colors.purple)))),
           ]),
-          ListTile(
-            leading: Icon(
-              Icons.navigation,
-              size: 35,
-            ),
-            tileColor: Colors.orangeAccent[100],
-            title: Text('Navigation',
-                style: TextStyle(
-                    fontFamily: "Nunito",
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.purple)),
-          ),
+          SizedBox(
+              height: 70,
+              child: Card(
+                  borderOnForeground: true,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(5),
+                          topRight: Radius.circular(5)),
+                      side: BorderSide(width: 2, color: Colors.black)),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.navigation_outlined,
+                      size: 35,
+                    ),
+                    tileColor: Colors.orangeAccent[100],
+                    title: Text('Navigation',
+                        style: TextStyle(
+                            fontFamily: "Nunito",
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.purple)),
+                  ))),
           Stack(
             children: <Widget>[
               GestureDetector(
                   child: SizedBox(
                       height: 230,
                       width: 400,
-                      child: Image.network(
-                          'https://www.bvb.ch/de/wp-content/uploads/sites/2/2022/05/Flexity.png',
-                          fit: BoxFit.cover))),
+                      child: Card(
+                          borderOnForeground: true,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                  bottomRight: Radius.circular(5),
+                                  topRight: Radius.circular(5)),
+                              side: BorderSide(width: 5, color: Colors.black)),
+                          child: Image.network(
+                              'https://www.bvb.ch/de/wp-content/uploads/sites/2/2022/05/Flexity.png',
+                              fit: BoxFit.cover)))),
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
                 child: const Card(
+                    borderOnForeground: true,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(5),
+                            topRight: Radius.circular(5)),
+                        side: BorderSide(width: 1, color: Colors.black)),
                     color: Colors.lightBlueAccent,
                     child: Text("Public Transport",
                         style: TextStyle(
@@ -214,12 +271,25 @@ class Homepage extends StatelessWidget {
                   child: SizedBox(
                       height: 230,
                       width: 400,
-                      child: Image.network(
-                          'https://map.viamichelin.com/map/carte?map=viamichelin&z=10&lat=47.55961&lon=7.58061&width=550&height=382&format=png&version=latest&layer=background&debug_pattern=.*',
-                          fit: BoxFit.cover))),
+                      child: Card(
+                          borderOnForeground: true,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                  bottomRight: Radius.circular(5),
+                                  topRight: Radius.circular(5)),
+                              side: BorderSide(width: 5, color: Colors.black)),
+                          child: Image.network(
+                              'https://map.viamichelin.com/map/carte?map=viamichelin&z=10&lat=47.55961&lon=7.58061&width=550&height=382&format=png&version=latest&layer=background&debug_pattern=.*',
+                              fit: BoxFit.cover)))),
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
                 child: const Card(
+                  borderOnForeground: true,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(5),
+                          topRight: Radius.circular(5)),
+                      side: BorderSide(width: 1, color: Colors.black)),
                   color: Colors.lightBlueAccent,
                   child: Text("Interactive Map",
                       style: TextStyle(
