@@ -127,7 +127,7 @@ class AttractionsKB extends StatelessWidget {
                 Stack(children: <Widget>[
                   GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/c');
+                        Navigator.pushNamed(context, '/d');
                       },
                       child: SizedBox(
                           height: 300,
