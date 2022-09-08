@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'attractionskb.dart';
+import 'attractionsgb.dart';
 import 'homepage.dart';
 
 void main() {
@@ -12,8 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(routes: <String, WidgetBuilder>{
-      //list of routes -> / results in deep link
       '/a': (BuildContext context) => const AttractionsKB(),
+      '/b': (BuildContext context) => const AttractionsGB(),
     }, home: const Homepage());
   }
 }
