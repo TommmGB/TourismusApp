@@ -55,6 +55,9 @@ class Homepage extends StatelessWidget {
                     ))),
             SizedBox(height: 10),
             GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/b');
+                },
                 child: Card(
                     elevation: 10,
                     child: ListTile(
@@ -149,6 +152,9 @@ class Homepage extends StatelessWidget {
           ),
           Stack(children: <Widget>[
             GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/b');
+                },
                 child: Image.network(
                     'https://flatfox.ch/media/medialibrary/2019/05/Munster_858x483px.jpg',
                     fit: BoxFit.cover)),
