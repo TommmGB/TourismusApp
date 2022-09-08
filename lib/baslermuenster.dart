@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class BaslerMuenster extends StatelessWidget {
-  const BaslerMuenster({super.key});
+class InfoFB extends StatelessWidget {
+  const InfoFB({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Basler Münster'),
+        title: const Text('Fondation Beyeler'),
       ),
     );
   }
