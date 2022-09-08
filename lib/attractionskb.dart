@@ -141,7 +141,7 @@ class AttractionsKB extends StatelessWidget {
                                   side: BorderSide(
                                       width: 5, color: Colors.black)),
                               child: Image.network(
-                                  'https://www.baselferien.ch/bcwa/wp-content/gf-uploads/2018/02/basler-muenster-basel-09.jpg',
+                                  'https://www.visit.alsace/wp-content/uploads/lei/pictures/252002085-tinguely-museum-1.jpg',
                                   fit: BoxFit.cover)))),
                   Container(
                       padding: const EdgeInsets.symmetric(
@@ -154,7 +154,7 @@ class AttractionsKB extends StatelessWidget {
                                   topRight: Radius.circular(5)),
                               side: BorderSide(width: 1, color: Colors.black)),
                           color: Colors.lightBlueAccent,
-                          child: Text("Basler Münster",
+                          child: Text("Tinguely Museum",
                               style: TextStyle(
                                   fontFamily: "Nunito",
                                   fontSize: 25,
