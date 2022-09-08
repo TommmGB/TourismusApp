@@ -55,6 +55,7 @@ class AttractionsGB extends StatelessWidget {
                               color: Colors.purple),
                         ),
                       ))),
+              SizedBox(height: 10),
               GestureDetector(
                   onTap: () {
                     Navigator.pushNamed(context, '/a');
@@ -112,35 +113,31 @@ class AttractionsGB extends StatelessWidget {
             SliverList(
               delegate: SliverChildListDelegate(
                 [
-                  Wrap(
-                    children: [
-                      Stack(
-                        children: <Widget>[
-                          GestureDetector(
-                              onTap: () {
-                                Navigator.pushNamed(context, '/a');
-                              },
-                              child: SizedBox(
-                                  height: 230,
-                                  width: 400,
-                                  child: Image.network(
-                                      'https://cdn.tomas-travel.com/tds/repository/TDS00020012496817936/TDS00020010010367324/TDS00020013696921880_sized_800_0.jpg',
-                                      fit: BoxFit.cover))),
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 0, horizontal: 0),
-                            child: const Card(
-                                color: Colors.lightBlueAccent,
-                                child: Text("Basler Münster",
-                                    style: TextStyle(
-                                        fontFamily: "Nunito",
-                                        fontSize: 25,
-                                        color: Colors.purple))),
-                          ),
-                        ],
+                  Stack(
+                    children: <Widget>[
+                      GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/a');
+                          },
+                          child: SizedBox(
+                              height: 230,
+                              width: 400,
+                              child: Image.network(
+                                  'https://cdn.tomas-travel.com/tds/repository/TDS00020012496817936/TDS00020010010367324/TDS00020013696921880_sized_800_0.jpg',
+                                  fit: BoxFit.cover))),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 0, horizontal: 0),
+                        child: const Card(
+                            color: Colors.lightBlueAccent,
+                            child: Text("Basler Münster",
+                                style: TextStyle(
+                                    fontFamily: "Nunito",
+                                    fontSize: 25,
+                                    color: Colors.purple))),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
