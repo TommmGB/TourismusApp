@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'attractionskb.dart';
 import 'attractionsgb.dart';
@@ -12,9 +13,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(routes: <String, WidgetBuilder>{
-      '/a': (BuildContext context) => const AttractionsKB(),
-      '/b': (BuildContext context) => const AttractionsGB(),
-    }, home: const Homepage());
+    return MaterialApp(
+        initialRoute: 'Homepage',
+        routes: <String, WidgetBuilder>{
+          '/a': (BuildContext context) => const AttractionsKB(),
+          '/b': (BuildContext context) => const AttractionsGB(),
+          'Homepage': (BuildContext context) => const Homepage(),
+        },
+        home: const Homepage());
   }
 }
