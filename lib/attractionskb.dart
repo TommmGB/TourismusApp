@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-//First Route: AttractionsKleinBasel
 class AttractionsKB extends StatelessWidget {
   const AttractionsKB({super.key});
 
