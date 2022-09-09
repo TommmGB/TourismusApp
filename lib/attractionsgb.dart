@@ -37,7 +37,7 @@ class AttractionsGB extends StatelessWidget {
                       elevation: 10,
                       child: ListTile(
                         tileColor: Colors.lightBlueAccent[100],
-                        leading: Icon(Icons.location_on_outlined),
+                        leading: Icon(Icons.home_outlined),
                         title: Text(
                           'Homepage',
                           style: TextStyle(
