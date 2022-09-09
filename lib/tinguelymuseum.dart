@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
+
+final Uri url = Uri.parse("https://www.tinguely.ch/en.html");
 
 class TinguelyMuseum extends StatelessWidget {
   const TinguelyMuseum({super.key});
@@ -132,14 +135,14 @@ class TinguelyMuseum extends StatelessWidget {
                       'https://www.upperrhinevalley.com/sites/default/files/public/styles/grid-8_gallery_image/public/content/3401/museum_tinguely_c_pino_musi.jpg?itok=sbtLsnXH'),
                   Stack(children: [
                     SizedBox(
-                        height: 200,
+                        height: 150,
                         width: 400,
                         child: Card(
-                            elevation: 0,
+                            elevation: 5,
                             color: Color.fromRGBO(211, 211, 211, 1.0))),
                     Padding(
                         padding:
-                            EdgeInsets.symmetric(vertical: 0, horizontal: 5),
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                         child: Text('Website:',
                             style: TextStyle(
                                 fontFamily: 'Nunito',
@@ -147,48 +150,30 @@ class TinguelyMuseum extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black))),
                     Padding(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 30, horizontal: 5),
-                      child: TextButton(
-                        onPressed: () async {
-                          String url = 'https://tinguely.ch';
-
-                          // ignore: deprecated_member_use
-                          if (await canLaunch(url)) {
-                            // ignore: deprecated_member_use
-                            await launch(
-                              url,
-                              forceWebView: true,
-                              enableJavaScript: true,
-                              enableDomStorage: true,
-                              webOnlyWindowName: '_self',
-                            );
-                          } else {
-                            print('Could not launch $url');
-                          }
-                        },
-                        child: Text(
-                          'tinguely.ch',
-                          style: TextStyle(
-                            fontFamily: 'Nunito',
-                            fontSize: 23,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ),
-                    ),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 40, horizontal: 5),
+                        child: TextButton(
+                            onPressed: () {
+                              launchUrl(url);
+                            },
+                            child: Text('tinguely.ch',
+                                style: TextStyle(
+                                    fontFamily: 'Nunito',
+                                    fontSize: 25,
+                                    decoration: TextDecoration.underline,
+                                    color: Colors.blue)))),
                   ]),
                   Stack(
                     children: [
                       SizedBox(
-                          height: 200,
+                          height: 250,
                           width: 400,
                           child: Card(
-                              elevation: 0,
+                              elevation: 5,
                               color: Color.fromRGBO(255, 211, 211, 1.0))),
                       Padding(
                           padding:
-                              EdgeInsets.symmetric(vertical: 0, horizontal: 5),
+                              EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                           child: Text('Opening Times:',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -197,7 +182,7 @@ class TinguelyMuseum extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding:
-                              EdgeInsets.symmetric(vertical: 30, horizontal: 5),
+                              EdgeInsets.symmetric(vertical: 40, horizontal: 5),
                           child: Text('Monday: Closed ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -205,15 +190,15 @@ class TinguelyMuseum extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding:
-                              EdgeInsets.symmetric(vertical: 60, horizontal: 5),
+                              EdgeInsets.symmetric(vertical: 70, horizontal: 5),
                           child: Text('Tuesday-Sunday: 11:00 - 18:00 ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontSize: 23,
                                   color: Colors.black))),
                       Padding(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 90, horizontal: 5),
+                          padding: EdgeInsets.symmetric(
+                              vertical: 100, horizontal: 5),
                           child: Text('Thursday: 11:00 - 21:00',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -221,18 +206,58 @@ class TinguelyMuseum extends StatelessWidget {
                                   color: Colors.black))),
                     ],
                   ),
+                  Stack(children: [
+                    SizedBox(
+                        height: 250,
+                        width: 400,
+                        child: Card(
+                            elevation: 5, color: Colors.lightGreenAccent[100])),
+                    Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 0, horizontal: 5),
+                        child: Text('Admission Fees:',
+                            style: TextStyle(
+                                fontFamily: 'Nunito',
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black))),
+                    Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 30, horizontal: 5),
+                        child: Text('Adults: 18 CHF ',
+                            style: TextStyle(
+                                fontFamily: 'Nunito',
+                                fontSize: 23,
+                                color: Colors.black))),
+                    Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 60, horizontal: 5),
+                        child: Text('Students & Disabled: 12 CHF  ',
+                            style: TextStyle(
+                                fontFamily: 'Nunito',
+                                fontSize: 23,
+                                color: Colors.black))),
+                    Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 90, horizontal: 5),
+                        child: Text('Groups (12+): 12 CHF ',
+                            style: TextStyle(
+                                fontFamily: 'Nunito',
+                                fontSize: 23,
+                                color: Colors.black))),
+                  ]),
                   Stack(
                     children: [
                       SizedBox(
-                          height: 200,
+                          height: 250,
                           width: 400,
                           child: Card(
-                              elevation: 2,
-                              color: Colors.lightGreenAccent[100])),
+                              elevation: 5,
+                              color: Colors.lightBlueAccent[100])),
                       Padding(
                           padding:
                               EdgeInsets.symmetric(vertical: 0, horizontal: 5),
-                          child: Text('Admission Fees:',
+                          child: Text('Address & Contact:',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontSize: 25,
@@ -241,7 +266,7 @@ class TinguelyMuseum extends StatelessWidget {
                       Padding(
                           padding:
                               EdgeInsets.symmetric(vertical: 30, horizontal: 5),
-                          child: Text('Adults: 18 CHF ',
+                          child: Text('Paul Sacher-Anlage 2',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontSize: 23,
@@ -249,7 +274,7 @@ class TinguelyMuseum extends StatelessWidget {
                       Padding(
                           padding:
                               EdgeInsets.symmetric(vertical: 60, horizontal: 5),
-                          child: Text('Students, people with disabilities:  ',
+                          child: Text('CH-4002 Basel ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontSize: 23,
@@ -257,27 +282,39 @@ class TinguelyMuseum extends StatelessWidget {
                       Padding(
                           padding:
                               EdgeInsets.symmetric(vertical: 90, horizontal: 5),
-                          child: Text('12 CHF',
+                          child: Text('Postfach 3255',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontSize: 23,
                                   color: Colors.black))),
                       Padding(
                           padding: EdgeInsets.symmetric(
-                              vertical: 120, horizontal: 5),
-                          child: Text('Groups (more than 12 persons): ',
-                              style: TextStyle(
-                                  fontFamily: 'Nunito',
-                                  fontSize: 23,
-                                  color: Colors.black))),
+                              vertical: 115, horizontal: 0),
+                          child: TextButton(
+                              onPressed: () {
+                                // ignore: deprecated_member_use
+                                launch("tel:// +41 61 681 93 20");
+                              },
+                              child: Text('Museum: +41 61 681 93 20',
+                                  style: TextStyle(
+                                      fontFamily: 'Nunito',
+                                      fontSize: 25,
+                                      decoration: TextDecoration.underline,
+                                      color: Colors.blue)))),
                       Padding(
                           padding: EdgeInsets.symmetric(
-                              vertical: 150, horizontal: 5),
-                          child: Text('12 CHF ',
-                              style: TextStyle(
-                                  fontFamily: 'Nunito',
-                                  fontSize: 23,
-                                  color: Colors.black))),
+                              vertical: 150, horizontal: 0),
+                          child: TextButton(
+                              onPressed: () {
+                                // ignore: deprecated_member_use
+                                launch("tel:// +41 61 688 94 58");
+                              },
+                              child: Text('Bistro: +41 61 688 94 58',
+                                  style: TextStyle(
+                                      fontFamily: 'Nunito',
+                                      fontSize: 25,
+                                      decoration: TextDecoration.underline,
+                                      color: Colors.blue)))),
                     ],
                   ),
                 ],
