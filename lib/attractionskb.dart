@@ -94,6 +94,24 @@ class AttractionsKB extends StatelessWidget {
                               color: Colors.purple),
                         ),
                       ))),
+              SizedBox(height: 10),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, 'Homepage');
+                  },
+                  child: Card(
+                      elevation: 10,
+                      child: ListTile(
+                        leading: Icon(Icons.arrow_back_outlined),
+                        tileColor: Colors.greenAccent[200],
+                        title: Text(
+                          'Return to last page',
+                          style: TextStyle(
+                              fontFamily: "Nunito",
+                              fontSize: 25,
+                              color: Colors.purple),
+                        ),
+                      ))),
             ],
           ),
         ),
@@ -106,7 +124,7 @@ class AttractionsKB extends StatelessWidget {
               pinned: true,
               floating: false,
               expandedHeight: 150,
-              backgroundColor: Colors.lightGreenAccent[100],
+              backgroundColor: Color.fromRGBO(180, 220, 144, 1.0),
               flexibleSpace: FlexibleSpaceBar(
                 title: const Text("Discover Kleinbasel!",
                     style: TextStyle(
