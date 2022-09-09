@@ -139,13 +139,13 @@ class AttractionsKB extends StatelessWidget {
                                       bottomRight: Radius.circular(5),
                                       topRight: Radius.circular(5)),
                                   side: BorderSide(
-                                      width: 5, color: Colors.black)),
+                                      width: 3, color: Colors.black)),
                               child: Image.network(
                                   'https://www.visit.alsace/wp-content/uploads/lei/pictures/252002085-tinguely-museum-1.jpg',
                                   fit: BoxFit.cover)))),
                   Container(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 5, horizontal: 5),
+                          vertical: 2, horizontal: 2),
                       child: const Card(
                           borderOnForeground: true,
                           shape: RoundedRectangleBorder(
