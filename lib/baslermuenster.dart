@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class InfoFB extends StatelessWidget {
-  const InfoFB({super.key});
+class BaslerMuenster extends StatelessWidget {
+  const BaslerMuenster({super.key});
 
   @override
   Widget build(BuildContext context) {
