@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-final Uri url = Uri.parse("https://www.tinguely.ch/en.html");
+final Uri url = Uri.parse("https://www.baslermuenster.ch/");
 
 class BaslerMuenster extends StatelessWidget {
   const BaslerMuenster({super.key});
@@ -14,7 +14,7 @@ class BaslerMuenster extends StatelessWidget {
             appBar: AppBar(
                 iconTheme: IconThemeData(color: Colors.black),
                 backgroundColor: Colors.orangeAccent[100],
-                title: Text('Tinguely Museum',
+                title: Text('Basler Muenster',
                     style: TextStyle(
                       color: Colors.blue,
                       fontFamily: 'Nunito',
@@ -187,8 +187,12 @@ class BaslerMuenster extends StatelessWidget {
               SliverList(
                 delegate: SliverChildListDelegate(
                   [
-                    Image.network(
-                        'https://www.upperrhinevalley.com/sites/default/files/public/styles/grid-8_gallery_image/public/content/3401/museum_tinguely_c_pino_musi.jpg?itok=sbtLsnXH'),
+                    SizedBox(
+                        width: 300,
+                        height: 200,
+                        child: Image.network(
+                            'https://mein.toubiz.de/api/v1/media/b259e60d-3252-46d6-af2a-a97e34f6a7eb/preview?format=image/jpeg&width=900',
+                            fit: BoxFit.cover)),
                     Stack(children: [
                       SizedBox(
                           height: 150,
@@ -212,7 +216,7 @@ class BaslerMuenster extends StatelessWidget {
                               onPressed: () {
                                 launchUrl(url);
                               },
-                              child: Text('tinguely.ch',
+                              child: Text('baslermuenster.ch',
                                   style: TextStyle(
                                       fontFamily: 'Nunito',
                                       fontSize: 25,
@@ -239,7 +243,7 @@ class BaslerMuenster extends StatelessWidget {
                         Padding(
                             padding: EdgeInsets.symmetric(
                                 vertical: 40, horizontal: 5),
-                            child: Text('Monday: Closed ',
+                            child: Text('Monday-Friday: 10-00 - 17-00 ',
                                 style: TextStyle(
                                     fontFamily: 'Nunito',
                                     fontSize: 23,
@@ -247,7 +251,7 @@ class BaslerMuenster extends StatelessWidget {
                         Padding(
                             padding: EdgeInsets.symmetric(
                                 vertical: 70, horizontal: 5),
-                            child: Text('Tuesday-Sunday: 11:00 - 18:00 ',
+                            child: Text('Saturday: 10:00-16:00 ',
                                 style: TextStyle(
                                     fontFamily: 'Nunito',
                                     fontSize: 23,
@@ -255,7 +259,7 @@ class BaslerMuenster extends StatelessWidget {
                         Padding(
                             padding: EdgeInsets.symmetric(
                                 vertical: 100, horizontal: 5),
-                            child: Text('Thursday: 11:00 - 21:00',
+                            child: Text('Sunday: 11:30 - 17:30',
                                 style: TextStyle(
                                     fontFamily: 'Nunito',
                                     fontSize: 23,
@@ -264,7 +268,7 @@ class BaslerMuenster extends StatelessWidget {
                     ),
                     Stack(children: [
                       SizedBox(
-                          height: 250,
+                          height: 430,
                           width: 400,
                           child: Card(
                               elevation: 5,
@@ -280,24 +284,58 @@ class BaslerMuenster extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding:
-                              EdgeInsets.symmetric(vertical: 30, horizontal: 5),
-                          child: Text('Adults: 18 CHF ',
+                              EdgeInsets.symmetric(vertical: 40, horizontal: 5),
+                          child: Text('Entrance Fee: Free ',
+                              style: TextStyle(
+                                  fontFamily: 'Nunito',
+                                  fontSize: 23,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black))),
+                      Padding(
+                          padding:
+                              EdgeInsets.symmetric(vertical: 70, horizontal: 5),
+                          child: Text('Tower Ascent:  ',
+                              style: TextStyle(
+                                  fontFamily: 'Nunito',
+                                  fontSize: 23,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black))),
+                      Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 100, horizontal: 5),
+                          child: Text('Adult: 6 CHF ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontSize: 23,
                                   color: Colors.black))),
                       Padding(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 60, horizontal: 5),
-                          child: Text('Students & Disabled: 12 CHF  ',
+                          padding: EdgeInsets.symmetric(
+                              vertical: 130, horizontal: 5),
+                          child: Text('Students, Retired & Groups 6+: ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontSize: 23,
                                   color: Colors.black))),
                       Padding(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 90, horizontal: 5),
-                          child: Text('Groups (12+): 12 CHF ',
+                          padding: EdgeInsets.symmetric(
+                              vertical: 160, horizontal: 5),
+                          child: Text('4 CHF ',
+                              style: TextStyle(
+                                  fontFamily: 'Nunito',
+                                  fontSize: 23,
+                                  color: Colors.black))),
+                      Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 190, horizontal: 5),
+                          child: Text('Under 14: ',
+                              style: TextStyle(
+                                  fontFamily: 'Nunito',
+                                  fontSize: 23,
+                                  color: Colors.black))),
+                      Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 220, horizontal: 5),
+                          child: Text('Free ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontSize: 23,
