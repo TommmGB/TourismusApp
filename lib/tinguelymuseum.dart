@@ -20,6 +20,7 @@ class TinguelyMuseum extends StatelessWidget {
                       fontFamily: 'Nunito',
                       fontSize: 30,
                     ))),
+            bottomNavigationBar: BottomAppBar(),
             drawer: Drawer(
                 backgroundColor: Colors.orangeAccent[100],
                 child: ListView(
@@ -125,6 +126,24 @@ class TinguelyMuseum extends StatelessWidget {
                                     color: Colors.purple),
                               ),
                             ))),
+                    SizedBox(height: 10),
+                    GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/a');
+                        },
+                        child: Card(
+                            elevation: 10,
+                            child: ListTile(
+                              leading: Icon(Icons.arrow_back_outlined),
+                              tileColor: Colors.greenAccent[100],
+                              title: Text(
+                                'Return to last page',
+                                style: TextStyle(
+                                    fontFamily: "Nunito",
+                                    fontSize: 25,
+                                    color: Colors.purple),
+                              ),
+                            ))),
                   ],
                 )),
             body: CustomScrollView(slivers: <Widget>[
@@ -170,7 +189,7 @@ class TinguelyMuseum extends StatelessWidget {
                           width: 400,
                           child: Card(
                               elevation: 5,
-                              color: Color.fromRGBO(255, 211, 211, 1.0))),
+                              color: Color.fromRGBO(211, 211, 211, 1.0))),
                       Padding(
                           padding:
                               EdgeInsets.symmetric(vertical: 10, horizontal: 5),
@@ -211,7 +230,8 @@ class TinguelyMuseum extends StatelessWidget {
                         height: 250,
                         width: 400,
                         child: Card(
-                            elevation: 5, color: Colors.lightGreenAccent[100])),
+                            elevation: 5,
+                            color: Color.fromRGBO(211, 211, 211, 1.0))),
                     Padding(
                         padding:
                             EdgeInsets.symmetric(vertical: 0, horizontal: 5),
@@ -246,77 +266,75 @@ class TinguelyMuseum extends StatelessWidget {
                                 fontSize: 23,
                                 color: Colors.black))),
                   ]),
-                  Stack(
-                    children: [
-                      SizedBox(
-                          height: 250,
-                          width: 400,
-                          child: Card(
-                              elevation: 5,
-                              color: Colors.lightBlueAccent[100])),
-                      Padding(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 0, horizontal: 5),
-                          child: Text('Address & Contact:',
-                              style: TextStyle(
-                                  fontFamily: 'Nunito',
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black))),
-                      Padding(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 30, horizontal: 5),
-                          child: Text('Paul Sacher-Anlage 2',
-                              style: TextStyle(
-                                  fontFamily: 'Nunito',
-                                  fontSize: 23,
-                                  color: Colors.black))),
-                      Padding(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 60, horizontal: 5),
-                          child: Text('CH-4002 Basel ',
-                              style: TextStyle(
-                                  fontFamily: 'Nunito',
-                                  fontSize: 23,
-                                  color: Colors.black))),
-                      Padding(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 90, horizontal: 5),
-                          child: Text('Postfach 3255',
-                              style: TextStyle(
-                                  fontFamily: 'Nunito',
-                                  fontSize: 23,
-                                  color: Colors.black))),
-                      Padding(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 115, horizontal: 0),
-                          child: TextButton(
-                              onPressed: () {
-                                // ignore: deprecated_member_use
-                                launch("tel:// +41 61 681 93 20");
-                              },
-                              child: Text('Museum: +41 61 681 93 20',
-                                  style: TextStyle(
-                                      fontFamily: 'Nunito',
-                                      fontSize: 25,
-                                      decoration: TextDecoration.underline,
-                                      color: Colors.blue)))),
-                      Padding(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 150, horizontal: 0),
-                          child: TextButton(
-                              onPressed: () {
-                                // ignore: deprecated_member_use
-                                launch("tel:// +41 61 688 94 58");
-                              },
-                              child: Text('Bistro: +41 61 688 94 58',
-                                  style: TextStyle(
-                                      fontFamily: 'Nunito',
-                                      fontSize: 25,
-                                      decoration: TextDecoration.underline,
-                                      color: Colors.blue)))),
-                    ],
-                  ),
+                  Stack(children: [
+                    SizedBox(
+                        height: 250,
+                        width: 400,
+                        child: Card(
+                            elevation: 5,
+                            color: Color.fromRGBO(211, 211, 211, 1.0))),
+                    Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 0, horizontal: 5),
+                        child: Text('Address & Contact:',
+                            style: TextStyle(
+                                fontFamily: 'Nunito',
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black))),
+                    Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 30, horizontal: 5),
+                        child: Text('Paul Sacher-Anlage 2',
+                            style: TextStyle(
+                                fontFamily: 'Nunito',
+                                fontSize: 23,
+                                color: Colors.black))),
+                    Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 60, horizontal: 5),
+                        child: Text('CH-4002 Basel ',
+                            style: TextStyle(
+                                fontFamily: 'Nunito',
+                                fontSize: 23,
+                                color: Colors.black))),
+                    Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 90, horizontal: 5),
+                        child: Text('Postfach 3255',
+                            style: TextStyle(
+                                fontFamily: 'Nunito',
+                                fontSize: 23,
+                                color: Colors.black))),
+                    Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 115, horizontal: 0),
+                        child: TextButton(
+                            onPressed: () {
+                              // ignore: deprecated_member_use
+                              launch("tel:// +41 61 681 93 20");
+                            },
+                            child: Text('Museum: +41 61 681 93 20',
+                                style: TextStyle(
+                                    fontFamily: 'Nunito',
+                                    fontSize: 25,
+                                    decoration: TextDecoration.underline,
+                                    color: Colors.blue)))),
+                    Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 150, horizontal: 0),
+                        child: TextButton(
+                            onPressed: () {
+                              // ignore: deprecated_member_use
+                              launch("tel:// +41 61 688 94 58");
+                            },
+                            child: Text('Bistro: +41 61 688 94 58',
+                                style: TextStyle(
+                                    fontFamily: 'Nunito',
+                                    fontSize: 25,
+                                    decoration: TextDecoration.underline,
+                                    color: Colors.blue))))
+                  ]),
                 ],
               )),
             ])));
