@@ -158,7 +158,7 @@ class TinguelyMuseum extends StatelessWidget {
                         width: 400,
                         child: Card(
                             elevation: 5,
-                            color: Color.fromRGBO(211, 211, 211, 1.0))),
+                            color: Color.fromRGBO(205, 205, 205, 1.0))),
                     Padding(
                         padding:
                             EdgeInsets.symmetric(vertical: 10, horizontal: 5),
@@ -189,7 +189,7 @@ class TinguelyMuseum extends StatelessWidget {
                           width: 400,
                           child: Card(
                               elevation: 5,
-                              color: Color.fromRGBO(211, 211, 211, 1.0))),
+                              color: Color.fromRGBO(205, 202, 202, 1.0))),
                       Padding(
                           padding:
                               EdgeInsets.symmetric(vertical: 10, horizontal: 5),
@@ -231,7 +231,7 @@ class TinguelyMuseum extends StatelessWidget {
                         width: 400,
                         child: Card(
                             elevation: 5,
-                            color: Color.fromRGBO(211, 211, 211, 1.0))),
+                            color: Color.fromRGBO(205, 202, 202, 1.0))),
                     Padding(
                         padding:
                             EdgeInsets.symmetric(vertical: 0, horizontal: 5),
@@ -272,7 +272,7 @@ class TinguelyMuseum extends StatelessWidget {
                         width: 400,
                         child: Card(
                             elevation: 5,
-                            color: Color.fromRGBO(211, 211, 211, 1.0))),
+                            color: Color.fromRGBO(205, 202, 202, 1.0))),
                     Padding(
                         padding:
                             EdgeInsets.symmetric(vertical: 0, horizontal: 5),
