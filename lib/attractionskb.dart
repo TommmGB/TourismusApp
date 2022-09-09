@@ -14,7 +14,7 @@ class AttractionsKB extends StatelessWidget {
               Container(
                 margin:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 70),
-                child: const Text('Grossbasel',
+                child: const Text('Kleinbasel',
                     style: TextStyle(
                       fontFamily: "Nunito",
                       fontWeight: FontWeight.bold,
@@ -37,7 +37,7 @@ class AttractionsKB extends StatelessWidget {
                       elevation: 10,
                       child: ListTile(
                         tileColor: Colors.lightBlueAccent[100],
-                        leading: Icon(Icons.location_on_outlined),
+                        leading: Icon(Icons.home_outlined),
                         title: Text(
                           'Homepage',
                           style: TextStyle(
