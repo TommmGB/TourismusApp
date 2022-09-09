@@ -7,7 +7,7 @@ class BaslerMuenster extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Fondation Beyeler'),
+        title: const Text('Basler Muenster'),
       ),
     );
   }
