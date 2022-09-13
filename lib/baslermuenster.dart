@@ -223,6 +223,32 @@ class BaslerMuenster extends StatelessWidget {
                                       decoration: TextDecoration.underline,
                                       color: Colors.blue)))),
                     ]),
+                    Stack(children: [
+                      SizedBox(
+                          height: 300,
+                          width: 400,
+                          child: Card(
+                              elevation: 5,
+                              color: Color.fromRGBO(205, 205, 205, 1.0))),
+                      Padding(
+                          padding:
+                              EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                          child: Text('Description:',
+                              style: TextStyle(
+                                  fontFamily: 'Nunito',
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black))),
+                      Padding(
+                          padding:
+                              EdgeInsets.symmetric(vertical: 40, horizontal: 5),
+                          child: Text(
+                              'The Basler Münster is one of the most famous Landmarks of Basel. The 67 meter high former episcopal church built between 1019 and 1500 offers wonderful views over the Rhine and is one of the most popular viewpoints in Basel. ',
+                              style: TextStyle(
+                                  fontFamily: 'Nunito',
+                                  fontSize: 23,
+                                  color: Colors.black))),
+                    ]),
                     Stack(
                       children: [
                         SizedBox(
@@ -284,8 +310,8 @@ class BaslerMuenster extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding:
-                              EdgeInsets.symmetric(vertical: 40, horizontal: 5),
-                          child: Text('Entrance Fee: Free ',
+                              EdgeInsets.symmetric(vertical: 25, horizontal: 5),
+                          child: Text('Entrance:',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontSize: 23,
@@ -293,7 +319,15 @@ class BaslerMuenster extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding:
-                              EdgeInsets.symmetric(vertical: 70, horizontal: 5),
+                              EdgeInsets.symmetric(vertical: 50, horizontal: 5),
+                          child: Text('Free',
+                              style: TextStyle(
+                                  fontFamily: 'Nunito',
+                                  fontSize: 23,
+                                  color: Colors.black))),
+                      Padding(
+                          padding:
+                              EdgeInsets.symmetric(vertical: 75, horizontal: 5),
                           child: Text('Tower Ascent:  ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -303,14 +337,14 @@ class BaslerMuenster extends StatelessWidget {
                       Padding(
                           padding: EdgeInsets.symmetric(
                               vertical: 100, horizontal: 5),
-                          child: Text('Adult: 6 CHF ',
+                          child: Text('Adults: 6 CHF ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontSize: 23,
                                   color: Colors.black))),
                       Padding(
                           padding: EdgeInsets.symmetric(
-                              vertical: 130, horizontal: 5),
+                              vertical: 125, horizontal: 5),
                           child: Text('Students, Retired & Groups 6+: ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -318,7 +352,7 @@ class BaslerMuenster extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding: EdgeInsets.symmetric(
-                              vertical: 160, horizontal: 5),
+                              vertical: 150, horizontal: 5),
                           child: Text('4 CHF ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -326,7 +360,7 @@ class BaslerMuenster extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding: EdgeInsets.symmetric(
-                              vertical: 190, horizontal: 5),
+                              vertical: 175, horizontal: 5),
                           child: Text('Under 14: ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -334,7 +368,7 @@ class BaslerMuenster extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding: EdgeInsets.symmetric(
-                              vertical: 220, horizontal: 5),
+                              vertical: 200, horizontal: 5),
                           child: Text('Free ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -360,7 +394,7 @@ class BaslerMuenster extends StatelessWidget {
                       Padding(
                           padding:
                               EdgeInsets.symmetric(vertical: 30, horizontal: 5),
-                          child: Text('Paul Sacher-Anlage 2',
+                          child: Text('Münsterplatz 9',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontSize: 23,
@@ -368,47 +402,25 @@ class BaslerMuenster extends StatelessWidget {
                       Padding(
                           padding:
                               EdgeInsets.symmetric(vertical: 60, horizontal: 5),
-                          child: Text('CH-4002 Basel ',
+                          child: Text('CH-4051 Basel ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
                                   fontSize: 23,
                                   color: Colors.black))),
                       Padding(
                           padding:
-                              EdgeInsets.symmetric(vertical: 90, horizontal: 5),
-                          child: Text('Postfach 3255',
-                              style: TextStyle(
-                                  fontFamily: 'Nunito',
-                                  fontSize: 23,
-                                  color: Colors.black))),
-                      Padding(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 115, horizontal: 0),
+                              EdgeInsets.symmetric(vertical: 85, horizontal: 0),
                           child: TextButton(
                               onPressed: () {
                                 // ignore: deprecated_member_use
                                 launch("tel:// +41 61 681 93 20");
                               },
-                              child: Text('Museum: +41 61 681 93 20',
+                              child: Text('Tourism Bureau: +41 61 277 45 42',
                                   style: TextStyle(
                                       fontFamily: 'Nunito',
                                       fontSize: 25,
                                       decoration: TextDecoration.underline,
                                       color: Colors.blue)))),
-                      Padding(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 150, horizontal: 0),
-                          child: TextButton(
-                              onPressed: () {
-                                // ignore: deprecated_member_use
-                                launch("tel:// +41 61 688 94 58");
-                              },
-                              child: Text('Bistro: +41 61 688 94 58',
-                                  style: TextStyle(
-                                      fontFamily: 'Nunito',
-                                      fontSize: 25,
-                                      decoration: TextDecoration.underline,
-                                      color: Colors.blue))))
                     ]),
                   ],
                 ),
