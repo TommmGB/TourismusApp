@@ -219,6 +219,32 @@ class TinguelyMuseum extends StatelessWidget {
                                       decoration: TextDecoration.underline,
                                       color: Colors.blue)))),
                     ]),
+                    Stack(children: [
+                      SizedBox(
+                          height: 320,
+                          width: 400,
+                          child: Card(
+                              elevation: 5,
+                              color: Color.fromRGBO(205, 205, 205, 1.0))),
+                      Padding(
+                          padding:
+                              EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                          child: Text('Description:',
+                              style: TextStyle(
+                                  fontFamily: 'Nunito',
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black))),
+                      Padding(
+                          padding:
+                              EdgeInsets.symmetric(vertical: 40, horizontal: 5),
+                          child: Text(
+                              "The Tinguely Museum contains the amazing works of the Swiss painter and sculptor Jean Tinguely. Along with Tinguely's works, new exhibitions from other artists are presented regularly in the museum.   ",
+                              style: TextStyle(
+                                  fontFamily: 'Nunito',
+                                  fontSize: 25,
+                                  color: Colors.black))),
+                    ]),
                     Stack(
                       children: [
                         SizedBox(
@@ -337,15 +363,7 @@ class TinguelyMuseum extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding:
-                              EdgeInsets.symmetric(vertical: 90, horizontal: 5),
-                          child: Text('Postfach 3255',
-                              style: TextStyle(
-                                  fontFamily: 'Nunito',
-                                  fontSize: 23,
-                                  color: Colors.black))),
-                      Padding(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 115, horizontal: 0),
+                              EdgeInsets.symmetric(vertical: 90, horizontal: 0),
                           child: TextButton(
                               onPressed: () {
                                 // ignore: deprecated_member_use
@@ -359,7 +377,7 @@ class TinguelyMuseum extends StatelessWidget {
                                       color: Colors.blue)))),
                       Padding(
                           padding: EdgeInsets.symmetric(
-                              vertical: 150, horizontal: 0),
+                              vertical: 125, horizontal: 0),
                           child: TextButton(
                               onPressed: () {
                                 // ignore: deprecated_member_use
