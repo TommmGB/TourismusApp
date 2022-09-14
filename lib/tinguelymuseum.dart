@@ -29,7 +29,7 @@ class TinguelyMuseum extends StatelessWidget {
                           icon: Icon(Icons.arrow_back_outlined),
                           iconSize: 25,
                           onPressed: (() {
-                            Navigator.pushNamed(context, 'Homepage');
+                            Navigator.pushNamed(context, '/a');
                           }))),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 30),
@@ -55,7 +55,7 @@ class TinguelyMuseum extends StatelessWidget {
                           icon: Icon(Icons.arrow_forward_outlined),
                           iconSize: 25,
                           onPressed: () {
-                            Navigator.pushNamed(context, 'Homepage');
+                            Navigator.pushNamed(context, '/e');
                           })),
                 ])),
             drawer: Drawer(
