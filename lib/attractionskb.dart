@@ -178,6 +178,42 @@ class AttractionsKB extends StatelessWidget {
                                   fontSize: 25,
                                   color: Colors.purple))))
                 ]),
+                Stack(children: <Widget>[
+                  GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/e');
+                      },
+                      child: SizedBox(
+                          height: 300,
+                          width: 400,
+                          child: Card(
+                              borderOnForeground: true,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.only(
+                                      bottomRight: Radius.circular(5),
+                                      topRight: Radius.circular(5)),
+                                  side: BorderSide(
+                                      width: 3, color: Colors.black)),
+                              child: Image.network(
+                                  'https://www.zum.de/Faecher/G/BW/Landeskunde/rhein/kultur/museen/beyeler/eingangsbereich.jpg',
+                                  fit: BoxFit.cover)))),
+                  Container(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 2, horizontal: 2),
+                      child: const Card(
+                          borderOnForeground: true,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                  bottomRight: Radius.circular(5),
+                                  topRight: Radius.circular(5)),
+                              side: BorderSide(width: 1, color: Colors.black)),
+                          color: Colors.lightBlueAccent,
+                          child: Text("Fondation Beyeler",
+                              style: TextStyle(
+                                  fontFamily: "Nunito",
+                                  fontSize: 25,
+                                  color: Colors.purple))))
+                ]),
               ]),
             ),
           ],
