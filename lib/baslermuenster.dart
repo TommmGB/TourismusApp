@@ -413,7 +413,7 @@ class BaslerMuenster extends StatelessWidget {
                           child: TextButton(
                               onPressed: () {
                                 // ignore: deprecated_member_use
-                                launch("tel:// +41 61 681 93 20");
+                                launch("tel:// +41 61 277 45 42");
                               },
                               child: Text('Tourism Bureau: +41 61 277 45 42',
                                   style: TextStyle(
