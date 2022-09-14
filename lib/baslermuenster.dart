@@ -26,7 +26,7 @@ class BaslerMuenster extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 30),
+                        padding: EdgeInsets.symmetric(horizontal: 40),
                         child: Text('Next',
                             style: TextStyle(
                               fontFamily: 'Nunito',
