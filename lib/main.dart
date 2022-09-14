@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tourismusapp/fondationbeyeler.dart';
 import 'tinguelymuseum.dart';
 import 'baslermuenster.dart';
 import 'attractionskb.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
           '/b': (BuildContext context) => const AttractionsGB(),
           '/c': (BuildContext context) => const BaslerMuenster(),
           '/d': (BuildContext context) => const TinguelyMuseum(),
+          '/e': (BuildContext context) => const FondationBeyeler(),
         },
         home: const Homepage());
   }
