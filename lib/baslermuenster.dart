@@ -26,7 +26,7 @@ class BaslerMuenster extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 25),
+                        padding: EdgeInsets.symmetric(horizontal: 30),
                         child: Text('Next',
                             style: TextStyle(
                               fontFamily: 'Nunito',
@@ -34,7 +34,7 @@ class BaslerMuenster extends StatelessWidget {
                             )),
                       ),
                       Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 0),
+                          padding: EdgeInsets.symmetric(horizontal: 10),
                           child: IconButton(
                               icon: Icon(Icons.arrow_forward_outlined),
                               iconSize: 25,
