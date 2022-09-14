@@ -22,42 +22,26 @@ class BaslerMuenster extends StatelessWidget {
                     ))),
             bottomNavigationBar: BottomAppBar(
                 color: Colors.orangeAccent[100],
-                child: new Row(children: [
-                  Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 2),
-                      child: IconButton(
-                          icon: Icon(Icons.arrow_back_outlined),
-                          iconSize: 25,
-                          onPressed: (() {
-                            Navigator.pushNamed(context, 'Homepage');
-                          }))),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 30),
-                    child: Text(
-                      'Previous',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontFamily: 'Nunito',
+                child: new Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 25),
+                        child: Text('Next',
+                            style: TextStyle(
+                              fontFamily: 'Nunito',
+                              fontSize: 20,
+                            )),
                       ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 55),
-                    child: Text('Next',
-                        style: TextStyle(
-                          fontFamily: 'Nunito',
-                          fontSize: 20,
-                        )),
-                  ),
-                  Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 0),
-                      child: IconButton(
-                          icon: Icon(Icons.arrow_forward_outlined),
-                          iconSize: 25,
-                          onPressed: () {
-                            Navigator.pushNamed(context, 'Homepage');
-                          })),
-                ])),
+                      Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 0),
+                          child: IconButton(
+                              icon: Icon(Icons.arrow_forward_outlined),
+                              iconSize: 25,
+                              onPressed: () {
+                                Navigator.pushNamed(context, 'Homepage');
+                              })),
+                    ])),
             drawer: Drawer(
                 backgroundColor: Colors.orangeAccent[100],
                 child: ListView(
@@ -166,7 +150,7 @@ class BaslerMuenster extends StatelessWidget {
                     SizedBox(height: 10),
                     GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, '/a');
+                          Navigator.pushNamed(context, '/b');
                         },
                         child: Card(
                             elevation: 10,
@@ -174,7 +158,7 @@ class BaslerMuenster extends StatelessWidget {
                               leading: Icon(Icons.arrow_back_outlined),
                               tileColor: Colors.greenAccent[100],
                               title: Text(
-                                'Return to last page',
+                                'Return to overview',
                                 style: TextStyle(
                                     fontFamily: "Nunito",
                                     fontSize: 25,
