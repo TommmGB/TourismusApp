@@ -178,6 +178,42 @@ class AttractionsGB extends StatelessWidget {
                                   fontSize: 25,
                                   color: Colors.purple))))
                 ]),
+                Stack(children: <Widget>[
+                  GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/f');
+                      },
+                      child: SizedBox(
+                          height: 300,
+                          width: 400,
+                          child: Card(
+                              borderOnForeground: true,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.only(
+                                      bottomRight: Radius.circular(5),
+                                      topRight: Radius.circular(5)),
+                                  side: BorderSide(
+                                      width: 5, color: Colors.black)),
+                              child: Image.network(
+                                  'https://www.nmbs.ch/.imaging/mte/nmb-theme/1180px-1xRes/dam/Bilder-Website/Home/Ausstellungen/Dauerausstellungen/2_2_4_mammut_saebelzahntiger/JPEG_1180/2_2_4_mammut_saebelzahntiger_3257.jpg/jcr:content/2_2_4_mammut_saebelzahntiger_3257.jpg',
+                                  fit: BoxFit.cover)))),
+                  Container(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 5, horizontal: 5),
+                      child: const Card(
+                          borderOnForeground: true,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                  bottomRight: Radius.circular(5),
+                                  topRight: Radius.circular(5)),
+                              side: BorderSide(width: 1, color: Colors.black)),
+                          color: Colors.lightBlueAccent,
+                          child: Text("Naturhistorisches Museum ",
+                              style: TextStyle(
+                                  fontFamily: "Nunito",
+                                  fontSize: 25,
+                                  color: Colors.purple))))
+                ]),
               ]),
             ),
           ],
