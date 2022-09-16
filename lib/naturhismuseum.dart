@@ -13,9 +13,9 @@ class NaturHisMuseum extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
-                iconTheme: IconThemeData(color: Colors.black),
+                iconTheme: const IconThemeData(color: Colors.black),
                 backgroundColor: Colors.orangeAccent[100],
-                title: Text('Naturhis. Museum ',
+                title: const Text('Naturhis. Museum ',
                     style: TextStyle(
                       color: Colors.blue,
                       fontFamily: 'Nunito',
@@ -23,16 +23,16 @@ class NaturHisMuseum extends StatelessWidget {
                     ))),
             bottomNavigationBar: BottomAppBar(
                 color: Colors.orangeAccent[100],
-                child: new Row(children: [
+                child: Row(children: [
                   Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 2),
+                      padding: const EdgeInsets.symmetric(horizontal: 2),
                       child: IconButton(
-                          icon: Icon(Icons.arrow_back_outlined),
+                          icon: const Icon(Icons.arrow_back_outlined),
                           iconSize: 25,
                           onPressed: (() {
                             Navigator.pushNamed(context, '/c');
                           }))),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 30),
                     child: Text(
                       'Previous',
@@ -42,7 +42,7 @@ class NaturHisMuseum extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 55),
                     child: Text('Next',
                         style: TextStyle(
@@ -51,9 +51,9 @@ class NaturHisMuseum extends StatelessWidget {
                         )),
                   ),
                   Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 0),
+                      padding: const EdgeInsets.symmetric(horizontal: 0),
                       child: IconButton(
-                          icon: Icon(Icons.arrow_forward_outlined),
+                          icon: const Icon(Icons.arrow_forward_outlined),
                           iconSize: 25,
                           onPressed: () {
                             Navigator.pushNamed(context, 'Homepage');
@@ -80,7 +80,7 @@ class NaturHisMuseum extends StatelessWidget {
                       endIndent: 0,
                       color: Colors.grey,
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     GestureDetector(
                         onTap: () {
                           Navigator.pushNamed(context, 'Homepage');
@@ -89,8 +89,8 @@ class NaturHisMuseum extends StatelessWidget {
                             elevation: 10,
                             child: ListTile(
                               tileColor: Colors.lightBlueAccent[100],
-                              leading: Icon(Icons.home_outlined),
-                              title: Text(
+                              leading: const Icon(Icons.home_outlined),
+                              title: const Text(
                                 'Homepage',
                                 style: TextStyle(
                                     fontFamily: "Nunito",
@@ -98,7 +98,7 @@ class NaturHisMuseum extends StatelessWidget {
                                     color: Colors.purple),
                               ),
                             ))),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     GestureDetector(
                         onTap: () {
                           Navigator.pushNamed(context, '/a');
@@ -107,8 +107,8 @@ class NaturHisMuseum extends StatelessWidget {
                             elevation: 10,
                             child: ListTile(
                               tileColor: Colors.lightBlueAccent[100],
-                              leading: Icon(Icons.location_on_outlined),
-                              title: Text(
+                              leading: const Icon(Icons.location_on_outlined),
+                              title: const Text(
                                 'Kleinbasel',
                                 style: TextStyle(
                                     fontFamily: "Nunito",
@@ -116,7 +116,7 @@ class NaturHisMuseum extends StatelessWidget {
                                     color: Colors.purple),
                               ),
                             ))),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     GestureDetector(
                         onTap: () {
                           Navigator.pushNamed(context, '/b');
@@ -125,8 +125,8 @@ class NaturHisMuseum extends StatelessWidget {
                             elevation: 10,
                             child: ListTile(
                               tileColor: Colors.lightBlueAccent[100],
-                              leading: Icon(Icons.location_on_outlined),
-                              title: Text(
+                              leading: const Icon(Icons.location_on_outlined),
+                              title: const Text(
                                 'Grossbasel',
                                 style: TextStyle(
                                     fontFamily: "Nunito",
@@ -134,14 +134,17 @@ class NaturHisMuseum extends StatelessWidget {
                                     color: Colors.purple),
                               ),
                             ))),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/g');
+                        },
                         child: Card(
                             elevation: 10,
                             child: ListTile(
-                              leading: Icon(Icons.tram_outlined),
+                              leading: const Icon(Icons.tram_outlined),
                               tileColor: Colors.lightBlueAccent[100],
-                              title: Text(
+                              title: const Text(
                                 'Public Transport',
                                 style: TextStyle(
                                     fontFamily: "Nunito",
@@ -149,14 +152,14 @@ class NaturHisMuseum extends StatelessWidget {
                                     color: Colors.purple),
                               ),
                             ))),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     GestureDetector(
                         child: Card(
                             elevation: 10,
                             child: ListTile(
-                              leading: Icon(Icons.map_outlined),
+                              leading: const Icon(Icons.map_outlined),
                               tileColor: Colors.lightBlueAccent[100],
-                              title: Text(
+                              title: const Text(
                                 'Interactive Map',
                                 style: TextStyle(
                                     fontFamily: "Nunito",
@@ -164,7 +167,7 @@ class NaturHisMuseum extends StatelessWidget {
                                     color: Colors.purple),
                               ),
                             ))),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     GestureDetector(
                         onTap: () {
                           Navigator.pushNamed(context, '/b');
@@ -172,9 +175,9 @@ class NaturHisMuseum extends StatelessWidget {
                         child: Card(
                             elevation: 10,
                             child: ListTile(
-                              leading: Icon(Icons.arrow_back_outlined),
+                              leading: const Icon(Icons.arrow_back_outlined),
                               tileColor: Colors.greenAccent[100],
-                              title: Text(
+                              title: const Text(
                                 'Return to overview',
                                 style: TextStyle(
                                     fontFamily: "Nunito",
@@ -191,13 +194,13 @@ class NaturHisMuseum extends StatelessWidget {
                     Image.network(
                         'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Naturhistorisches_Museum_Basel_Eingang2.jpg/800px-Naturhistorisches_Museum_Basel_Eingang2.jpg'),
                     Stack(children: [
-                      SizedBox(
+                      const SizedBox(
                           height: 150,
                           width: 400,
                           child: Card(
                               elevation: 5,
                               color: Color.fromRGBO(205, 205, 205, 1.0))),
-                      Padding(
+                      const Padding(
                           padding:
                               EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                           child: Text('Website:',
@@ -207,20 +210,20 @@ class NaturHisMuseum extends StatelessWidget {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black))),
                       Padding(
-                          padding:
-                              EdgeInsets.symmetric(vertical: 40, horizontal: 5),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 40, horizontal: 5),
                           child: TextButton(
                               onPressed: () {
                                 launchUrl(url);
                               },
-                              child: Text('nmbs.ch',
+                              child: const Text('nmbs.ch',
                                   style: TextStyle(
                                       fontFamily: 'Nunito',
                                       fontSize: 25,
                                       decoration: TextDecoration.underline,
                                       color: Colors.blue)))),
                     ]),
-                    Stack(children: [
+                    Stack(children: const [
                       SizedBox(
                           height: 350,
                           width: 400,
@@ -248,13 +251,13 @@ class NaturHisMuseum extends StatelessWidget {
                     ]),
                     Stack(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                             height: 570,
                             width: 400,
                             child: Card(
                                 elevation: 5,
                                 color: Color.fromRGBO(205, 202, 202, 1.0))),
-                        Padding(
+                        const Padding(
                             padding: EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 5),
                             child: Text('Opening Times:',
@@ -263,7 +266,7 @@ class NaturHisMuseum extends StatelessWidget {
                                     fontSize: 25,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black))),
-                        Padding(
+                        const Padding(
                             padding: EdgeInsets.symmetric(
                                 vertical: 50, horizontal: 5),
                             child: Text('Monday: Closed ',
@@ -271,7 +274,7 @@ class NaturHisMuseum extends StatelessWidget {
                                     fontFamily: 'Nunito',
                                     fontSize: 23,
                                     color: Colors.black))),
-                        Padding(
+                        const Padding(
                             padding: EdgeInsets.symmetric(
                                 vertical: 90, horizontal: 5),
                             child: Text('Tuesday-Sunday: 10:00 - 17:00 ',
@@ -279,7 +282,7 @@ class NaturHisMuseum extends StatelessWidget {
                                     fontFamily: 'Nunito',
                                     fontSize: 23,
                                     color: Colors.black))),
-                        Padding(
+                        const Padding(
                             padding: EdgeInsets.symmetric(
                                 vertical: 130, horizontal: 5),
                             child: Text('Special Opening Days: ',
@@ -287,7 +290,7 @@ class NaturHisMuseum extends StatelessWidget {
                                     fontFamily: 'Nunito',
                                     fontSize: 23,
                                     color: Colors.black))),
-                        Padding(
+                        const Padding(
                             padding: EdgeInsets.symmetric(
                                 vertical: 170, horizontal: 5),
                             child: Text('New Year, Christmas (25.12), Easter',
@@ -295,7 +298,7 @@ class NaturHisMuseum extends StatelessWidget {
                                     fontFamily: 'Nunito',
                                     fontSize: 23,
                                     color: Colors.black))),
-                        Padding(
+                        const Padding(
                             padding: EdgeInsets.symmetric(
                                 vertical: 210, horizontal: 5),
                             child: Text('Other Opening Times:',
@@ -304,13 +307,13 @@ class NaturHisMuseum extends StatelessWidget {
                                     fontSize: 23,
                                     color: Colors.black))),
                         Padding(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 vertical: 250, horizontal: 5),
                             child: TextButton(
                                 onPressed: () {
                                   launchUrl(urs);
                                 },
-                                child: Text(
+                                child: const Text(
                                     'See: https://www.nmbs.ch/home/info_angebote/ihr-besuch',
                                     style: TextStyle(
                                         fontFamily: 'Nunito',
@@ -319,7 +322,7 @@ class NaturHisMuseum extends StatelessWidget {
                                         color: Colors.blue)))),
                       ],
                     ),
-                    Stack(children: [
+                    Stack(children: const [
                       SizedBox(
                           height: 500,
                           width: 400,
@@ -378,13 +381,13 @@ class NaturHisMuseum extends StatelessWidget {
                                   color: Colors.black))),
                     ]),
                     Stack(children: [
-                      SizedBox(
+                      const SizedBox(
                           height: 280,
                           width: 400,
                           child: Card(
                               elevation: 5,
                               color: Color.fromRGBO(205, 202, 202, 1.0))),
-                      Padding(
+                      const Padding(
                           padding:
                               EdgeInsets.symmetric(vertical: 0, horizontal: 5),
                           child: Text('Address & Contact:',
@@ -393,7 +396,7 @@ class NaturHisMuseum extends StatelessWidget {
                                   fontSize: 25,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black))),
-                      Padding(
+                      const Padding(
                           padding:
                               EdgeInsets.symmetric(vertical: 30, horizontal: 5),
                           child: Text('Augustinergasse 2',
@@ -401,7 +404,7 @@ class NaturHisMuseum extends StatelessWidget {
                                   fontFamily: 'Nunito',
                                   fontSize: 23,
                                   color: Colors.black))),
-                      Padding(
+                      const Padding(
                           padding:
                               EdgeInsets.symmetric(vertical: 60, horizontal: 5),
                           child: Text('CH-4051 Basel ',
@@ -409,7 +412,7 @@ class NaturHisMuseum extends StatelessWidget {
                                   fontFamily: 'Nunito',
                                   fontSize: 23,
                                   color: Colors.black))),
-                      Padding(
+                      const Padding(
                           padding:
                               EdgeInsets.symmetric(vertical: 90, horizontal: 5),
                           child: Text('Email: nmb@bs.ch ',
@@ -418,14 +421,14 @@ class NaturHisMuseum extends StatelessWidget {
                                   fontSize: 23,
                                   color: Colors.black))),
                       Padding(
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                               vertical: 120, horizontal: 0),
                           child: TextButton(
                               onPressed: () {
                                 // ignore: deprecated_member_use
                                 launch("tel:// +41 61 266 55 00");
                               },
-                              child: Text('Tel +41 61 266 55 00',
+                              child: const Text('Tel +41 61 266 55 00',
                                   style: TextStyle(
                                       fontFamily: 'Nunito',
                                       fontSize: 23,
