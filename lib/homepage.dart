@@ -26,7 +26,7 @@ class Homepage extends StatelessWidget {
               endIndent: 0,
               color: Colors.grey,
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/a');
@@ -35,8 +35,8 @@ class Homepage extends StatelessWidget {
                     elevation: 10,
                     child: ListTile(
                       tileColor: Colors.lightBlueAccent[100],
-                      leading: Icon(Icons.location_on_outlined),
-                      title: Text(
+                      leading: const Icon(Icons.location_on_outlined),
+                      title: const Text(
                         'Kleinbasel',
                         style: TextStyle(
                             fontFamily: "Nunito",
@@ -44,7 +44,7 @@ class Homepage extends StatelessWidget {
                             color: Colors.purple),
                       ),
                     ))),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/b');
@@ -52,9 +52,9 @@ class Homepage extends StatelessWidget {
                 child: Card(
                     elevation: 10,
                     child: ListTile(
-                      leading: Icon(Icons.location_on_outlined),
+                      leading: const Icon(Icons.location_on_outlined),
                       tileColor: Colors.lightBlueAccent[100],
-                      title: Text(
+                      title: const Text(
                         'Grossbasel',
                         style: TextStyle(
                             fontFamily: "Nunito",
@@ -62,14 +62,17 @@ class Homepage extends StatelessWidget {
                             color: Colors.purple),
                       ),
                     ))),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/g');
+                },
                 child: Card(
                     elevation: 10,
                     child: ListTile(
-                      leading: Icon(Icons.tram_outlined),
+                      leading: const Icon(Icons.tram_outlined),
                       tileColor: Colors.lightBlueAccent[100],
-                      title: Text(
+                      title: const Text(
                         'Public Transport',
                         style: TextStyle(
                             fontFamily: "Nunito",
@@ -77,14 +80,14 @@ class Homepage extends StatelessWidget {
                             color: Colors.purple),
                       ),
                     ))),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             GestureDetector(
                 child: Card(
                     elevation: 10,
                     child: ListTile(
-                      leading: Icon(Icons.map_outlined),
+                      leading: const Icon(Icons.map_outlined),
                       tileColor: Colors.lightBlueAccent[100],
-                      title: Text(
+                      title: const Text(
                         'Interactive Map',
                         style: TextStyle(
                             fontFamily: "Nunito",
@@ -97,7 +100,7 @@ class Homepage extends StatelessWidget {
       ),
       body: CustomScrollView(slivers: <Widget>[
         SliverAppBar(
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: const IconThemeData(color: Colors.black),
           forceElevated: false,
           snap: false,
           pinned: true,
@@ -123,18 +126,18 @@ class Homepage extends StatelessWidget {
               height: 70,
               child: Card(
                   borderOnForeground: true,
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
                           bottomRight: Radius.circular(5),
                           topRight: Radius.circular(5)),
                       side: BorderSide(width: 3, color: Colors.black)),
                   child: ListTile(
-                    leading: Icon(
+                    leading: const Icon(
                       Icons.location_on_outlined,
                       size: 35,
                     ),
                     tileColor: Colors.orangeAccent[100],
-                    title: Text('Locations',
+                    title: const Text('Locations',
                         style: TextStyle(
                             fontFamily: "Nunito",
                             fontSize: 30,
@@ -152,7 +155,7 @@ class Homepage extends StatelessWidget {
                       width: 400,
                       child: Card(
                           borderOnForeground: true,
-                          shape: RoundedRectangleBorder(
+                          shape: const RoundedRectangleBorder(
                               borderRadius: BorderRadius.only(
                                   bottomRight: Radius.circular(5),
                                   topRight: Radius.circular(5)),
@@ -185,7 +188,7 @@ class Homepage extends StatelessWidget {
                 },
                 child: Card(
                     borderOnForeground: true,
-                    shape: RoundedRectangleBorder(
+                    shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.only(
                             bottomRight: Radius.circular(5),
                             topRight: Radius.circular(5)),
@@ -213,18 +216,18 @@ class Homepage extends StatelessWidget {
               height: 70,
               child: Card(
                   borderOnForeground: true,
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
                           bottomRight: Radius.circular(5),
                           topRight: Radius.circular(5)),
                       side: BorderSide(width: 3, color: Colors.black)),
                   child: ListTile(
-                    leading: Icon(
+                    leading: const Icon(
                       Icons.navigation_outlined,
                       size: 35,
                     ),
                     tileColor: Colors.orangeAccent[100],
-                    title: Text('Navigation',
+                    title: const Text('Navigation',
                         style: TextStyle(
                             fontFamily: "Nunito",
                             fontSize: 30,
@@ -234,12 +237,15 @@ class Homepage extends StatelessWidget {
           Stack(
             children: <Widget>[
               GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/g');
+                  },
                   child: SizedBox(
                       height: 230,
                       width: 400,
                       child: Card(
                           borderOnForeground: true,
-                          shape: RoundedRectangleBorder(
+                          shape: const RoundedRectangleBorder(
                               borderRadius: BorderRadius.only(
                                   bottomRight: Radius.circular(5),
                                   topRight: Radius.circular(5)),
@@ -273,7 +279,7 @@ class Homepage extends StatelessWidget {
                       width: 400,
                       child: Card(
                           borderOnForeground: true,
-                          shape: RoundedRectangleBorder(
+                          shape: const RoundedRectangleBorder(
                               borderRadius: BorderRadius.only(
                                   bottomRight: Radius.circular(5),
                                   topRight: Radius.circular(5)),
