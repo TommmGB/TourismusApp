@@ -278,7 +278,7 @@ class BaslerMuenster extends StatelessWidget {
                     ),
                     Stack(children: const [
                       SizedBox(
-                          height: 430,
+                          height: 510,
                           width: 400,
                           child: Card(
                               elevation: 5,
@@ -294,7 +294,7 @@ class BaslerMuenster extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding:
-                              EdgeInsets.symmetric(vertical: 25, horizontal: 5),
+                              EdgeInsets.symmetric(vertical: 30, horizontal: 5),
                           child: Text('Entrance:',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -303,7 +303,7 @@ class BaslerMuenster extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding:
-                              EdgeInsets.symmetric(vertical: 50, horizontal: 5),
+                              EdgeInsets.symmetric(vertical: 60, horizontal: 5),
                           child: Text('Free',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -311,7 +311,7 @@ class BaslerMuenster extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding:
-                              EdgeInsets.symmetric(vertical: 75, horizontal: 5),
+                              EdgeInsets.symmetric(vertical: 90, horizontal: 5),
                           child: Text('Tower Ascent:  ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -320,7 +320,7 @@ class BaslerMuenster extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding: EdgeInsets.symmetric(
-                              vertical: 100, horizontal: 5),
+                              vertical: 120, horizontal: 5),
                           child: Text('Adults: 6 CHF ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -328,7 +328,7 @@ class BaslerMuenster extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding: EdgeInsets.symmetric(
-                              vertical: 125, horizontal: 5),
+                              vertical: 150, horizontal: 5),
                           child: Text('Students, Retired & Groups 6+: ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -336,7 +336,7 @@ class BaslerMuenster extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding: EdgeInsets.symmetric(
-                              vertical: 150, horizontal: 5),
+                              vertical: 180, horizontal: 5),
                           child: Text('4 CHF ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -344,7 +344,7 @@ class BaslerMuenster extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding: EdgeInsets.symmetric(
-                              vertical: 175, horizontal: 5),
+                              vertical: 210, horizontal: 5),
                           child: Text('Under 14: ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
@@ -352,7 +352,7 @@ class BaslerMuenster extends StatelessWidget {
                                   color: Colors.black))),
                       Padding(
                           padding: EdgeInsets.symmetric(
-                              vertical: 200, horizontal: 5),
+                              vertical: 240, horizontal: 5),
                           child: Text('Free ',
                               style: TextStyle(
                                   fontFamily: 'Nunito',
