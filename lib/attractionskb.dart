@@ -28,7 +28,7 @@ class AttractionsKB extends StatelessWidget {
                 endIndent: 0,
                 color: Colors.grey,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               GestureDetector(
                   onTap: () {
                     Navigator.pushNamed(context, 'Homepage');
@@ -37,8 +37,8 @@ class AttractionsKB extends StatelessWidget {
                       elevation: 10,
                       child: ListTile(
                         tileColor: Colors.lightBlueAccent[100],
-                        leading: Icon(Icons.home_outlined),
-                        title: Text(
+                        leading: const Icon(Icons.home_outlined),
+                        title: const Text(
                           'Homepage',
                           style: TextStyle(
                               fontFamily: "Nunito",
@@ -46,7 +46,7 @@ class AttractionsKB extends StatelessWidget {
                               color: Colors.purple),
                         ),
                       ))),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               GestureDetector(
                   onTap: () {
                     Navigator.pushNamed(context, '/b');
@@ -55,8 +55,8 @@ class AttractionsKB extends StatelessWidget {
                       elevation: 10,
                       child: ListTile(
                         tileColor: Colors.lightBlueAccent[100],
-                        leading: Icon(Icons.location_on_outlined),
-                        title: Text(
+                        leading: const Icon(Icons.location_on_outlined),
+                        title: const Text(
                           'Grossbasel',
                           style: TextStyle(
                               fontFamily: "Nunito",
@@ -64,14 +64,17 @@ class AttractionsKB extends StatelessWidget {
                               color: Colors.purple),
                         ),
                       ))),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/g');
+                  },
                   child: Card(
                       elevation: 10,
                       child: ListTile(
-                        leading: Icon(Icons.tram_outlined),
+                        leading: const Icon(Icons.tram_outlined),
                         tileColor: Colors.lightBlueAccent[100],
-                        title: Text(
+                        title: const Text(
                           'Public Transport',
                           style: TextStyle(
                               fontFamily: "Nunito",
@@ -79,14 +82,14 @@ class AttractionsKB extends StatelessWidget {
                               color: Colors.purple),
                         ),
                       ))),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               GestureDetector(
                   child: Card(
                       elevation: 10,
                       child: ListTile(
-                        leading: Icon(Icons.map_outlined),
+                        leading: const Icon(Icons.map_outlined),
                         tileColor: Colors.lightBlueAccent[100],
-                        title: Text(
+                        title: const Text(
                           'Interactive Map',
                           style: TextStyle(
                               fontFamily: "Nunito",
@@ -94,7 +97,7 @@ class AttractionsKB extends StatelessWidget {
                               color: Colors.purple),
                         ),
                       ))),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               GestureDetector(
                   onTap: () {
                     Navigator.pushNamed(context, 'Homepage');
@@ -102,9 +105,9 @@ class AttractionsKB extends StatelessWidget {
                   child: Card(
                       elevation: 10,
                       child: ListTile(
-                        leading: Icon(Icons.arrow_back_outlined),
+                        leading: const Icon(Icons.arrow_back_outlined),
                         tileColor: Colors.greenAccent[200],
-                        title: Text(
+                        title: const Text(
                           'Return to last page',
                           style: TextStyle(
                               fontFamily: "Nunito",
@@ -117,7 +120,7 @@ class AttractionsKB extends StatelessWidget {
         ),
         body: CustomScrollView(
           slivers: <Widget>[
-            SliverAppBar(
+            const SliverAppBar(
               iconTheme: IconThemeData(color: Colors.black),
               forceElevated: false,
               snap: false,
@@ -126,7 +129,7 @@ class AttractionsKB extends StatelessWidget {
               expandedHeight: 150,
               backgroundColor: Color.fromRGBO(180, 220, 144, 1.0),
               flexibleSpace: FlexibleSpaceBar(
-                title: const Text("Discover Kleinbasel!",
+                title: Text("Discover Kleinbasel!",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Color.fromRGBO(0, 0, 0, 1.0),
@@ -152,7 +155,7 @@ class AttractionsKB extends StatelessWidget {
                           width: 400,
                           child: Card(
                               borderOnForeground: true,
-                              shape: RoundedRectangleBorder(
+                              shape: const RoundedRectangleBorder(
                                   borderRadius: BorderRadius.only(
                                       bottomRight: Radius.circular(5),
                                       topRight: Radius.circular(5)),
@@ -188,7 +191,7 @@ class AttractionsKB extends StatelessWidget {
                           width: 400,
                           child: Card(
                               borderOnForeground: true,
-                              shape: RoundedRectangleBorder(
+                              shape: const RoundedRectangleBorder(
                                   borderRadius: BorderRadius.only(
                                       bottomRight: Radius.circular(5),
                                       topRight: Radius.circular(5)),
